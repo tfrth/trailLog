@@ -1,8 +1,15 @@
 var app = angular.module('trailApp', ['ngRoute']);
 
-app.config(function($routeProvider){
+app.config(function($routeProvider,){
+	
 	$routeProvider
+
 	.when('/', {
+		templateUrl: '/templates/home.html',
+		controller: 'homeCtrl'
+	})
+	
+	.when('/auth', {
 		templateUrl: '/templates/auth.html',
 		controller: 'authCtrl'
 
@@ -14,29 +21,20 @@ app.config(function($routeProvider){
 
 		// }
 	})
-	.when('/keen', {
-		templateUrl: '/templates/keen.html',
-		controller: 'keenCtrl'
-		// resolve: {
-
-		// }
-	})
-	.when('/beenThere', {
-		templateUrl: '/templates/beenThere.html',
-		controller: 'beenCtrl'
+	.when('/log', {
+		templateUrl: '/templates/log.html',
+		controller: 'logCtrl'
 		// resolve: {
 
 		// }
 	})
 	.when('/signup', {
-	   	templateUrl: 'public/templates/signup.html',
-	   	conntroller: 'signupCtrl'
-	   })
-	.when('/peace', {
-		templateUrl: '/templates/peace.html',
-		controller: 'peaceCtrl'
+	   	templateUrl: '/templates/signup.html',
+	   	conntroller: 'authCtrl'
 	})
 	.otherwise({
 		redirectTo: '/'
 	});
+
+	// $locationProvider.html5Mode(true);
 });

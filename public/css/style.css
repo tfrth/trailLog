@@ -1,0 +1,39 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/**{
+	border: 1px solid red;
+}*/
+
+.navbar {
+	background-image: url("http://shutupandtakemethere.com/pics/032014/bull-of-the-woods-wilderness-oregon--big.jpg");
+	/*opacity: .4;*/
+	height: 300px;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.trail-logo {
+ 	font-family: 'Lobster', Georgia, Times, serif;
+    font-size: 70px;
+    /*margin-bottom: 10px;*/
+    text-align: center;
+    padding-top: 80px;
+   /* padding-left: 45px;*/
+    width: 40%;
+    color: white;
+    margin-left: 350px;
+ }
+
+ h3 {
+ 	font-family: 'cabin';
+ 	font-size: 22px;
+ 	text-align: center;
+ /*	margin-left: 110px;*/
+ 	width: 100%;
+ }
