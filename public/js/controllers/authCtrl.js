@@ -5,7 +5,8 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		authService.login($scope.username, $scope.password).then(function() {
 			$location.path('/log');
 		}).catch(function(err) {
-			alert('Incorrect username or password!');
+			// alert('Incorrect username or password!');
+			$scope.message = "Oops! Incorrect username or password.";
 		})
 	};
 	$scope.clickRegister = function() {
@@ -13,7 +14,8 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		authService.register($scope.username, $scope.password).then(function() {
 			$location.path('/log');
 		}).catch(function(err) {
-			alert('Error signing up');
+			// alert('Error signing up');
+			$scope.message = "There was an error signing up, please try again!"
 		})
 	};
 	// $scope.clickLogout = function() {

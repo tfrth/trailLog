@@ -1,5 +1,5 @@
 var app = angular.module('trailApp');
 
-app.controller('logCtrl', function(){
+app.controller('logCtrl', function($scope){
 
 });

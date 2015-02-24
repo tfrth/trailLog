@@ -8,9 +8,9 @@ html, body {
 
 
 
-*{
+/**{
 	border: 1px solid red;
-}
+}*/
 
 .main {
 	background-image: url("http://shutupandtakemethere.com/pics/032014/bull-of-the-woods-wilderness-oregon--big.jpg");
@@ -76,6 +76,10 @@ html, body {
 	border: 1px solid transparent;
 	line-height: 1.33;
 
+}
+
+.errorMessage {
+	color: red;
 }
 
 

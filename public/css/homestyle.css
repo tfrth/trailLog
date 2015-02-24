@@ -1,28 +1,28 @@
-html, body {
+/*html, body {
 	height: 100%;
 	width: 100%;
 	margin: 0px;
 	padding-top: 0px;
 
-}
+}*/
 
-*{
+/**{
 	border: 1px solid red;
 }
-
-.container {
+*/
+/*.container {
 	display: flex;
 	height: 100%;
 	width: 100%;
-	margin-bottom: 0px;
+	margin-bottom: 0px;*/
 	/*background-image: url("http://shutupandtakemethere.com/pics/032014/bull-of-the-woods-wilderness-oregon--big.jpg");*/
-	background: #EEEEEE;
-}
+/*	background: #EEEEEE;
+}*/
 
-.section {
+/*.section {
 	width: 50%;
 	height: 100%;
-}
+}*/
 
 
 /*.tree {

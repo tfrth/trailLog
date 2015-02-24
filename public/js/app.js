@@ -1,7 +1,6 @@
 var app = angular.module('trailApp', ['ngRoute']);
 
-app.config(function($routeProvider, $locationProvider){
-	
+app.config(function($routeProvider){
 	$routeProvider
 
 	.when('/', {
@@ -15,16 +14,21 @@ app.config(function($routeProvider, $locationProvider){
 
 	})
 	.when('/profile', {
-		templateUrl: '/templates/profile',
-		controller: 'profileCtrl'
-		// resolve: {
-
-		// }
+		templateUrl: '/templates/profile.html',
+		controller: 'profileCtrl',
+		resolve: {
+			profile: function(profileService) {
+				return profileService.getProfile();
+			}
+		}
 	})
 	.when('/log', {
 		templateUrl: '/templates/log.html',
 		controller: 'logCtrl'
-		// resolve: {
+		// resolve: { function(logService) {
+
+
+		// 	}
 
 		// }
 	})
@@ -36,5 +40,5 @@ app.config(function($routeProvider, $locationProvider){
 		redirectTo: '/'
 	});
 
-	$locationProvider.html5Mode(true);
+	// $locationProvider.html5Mode(true);
 });

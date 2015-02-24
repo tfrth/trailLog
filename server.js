@@ -47,7 +47,6 @@ passport.deserializeUser(function(obj, done) {
 
 
 var app = express();
-// app.use(logout);
 app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.json());
 app.use(session({
@@ -72,12 +71,15 @@ app.post('/api/register', function(req, res) {
 	});
 });
 
+// app.get('/api/profile', isAuthed, userController.profile);
+
+// app.get('/api/')
+
 // app.get('/api/logout', logout(req.body));
 
-app.get('/api/logout', function(req, res) {
+app.get('/api/logout', function (req, res) {
         req.logout();
-        // res.status(200).end();
-        // res.redirect('/');
+      	res.redirect('/#/');
     });
 
 

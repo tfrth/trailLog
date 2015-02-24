@@ -20,12 +20,12 @@
             <input type="password" class="form-control" ng-model="password">
         </div>
 
-        <button type="submit" class="btn btn-warning btn-lg" ng-click="clickRegister()">Signup</button>
+        <button type="submit" class="btn btn-warning btn-lg" ng-click="clickRegister()">Signup</button> <span class="errorMessage">{{message}}</span>
     </form>
 
     <hr>
 
-    <p>Already have an account? <a href="/auth">Login</a></p>
+    <p>Already have an account? <a href="#/auth">Login</a></p>
    <!--  <p>Or go <a href="/home">home</a>.</p> -->
 
 </div>

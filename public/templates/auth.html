@@ -21,12 +21,12 @@
             <input type="password" class="form-control" ng-model="password">
         </div>
 
-        <button type="submit" class="btn btn-warning btn-lg" ng-click="clickLogin()">Login</button>
+        <button type="submit" class="btn btn-warning btn-lg" ng-click="clickLogin()">Login</button>&nbsp;&nbsp;&nbsp;<span class="errorMessage">{{message}}</span>
     </form>
 
     <hr>
     <!-- <p>Need to <a ng-click="changeState('register')">register instead?</a></p> --> 
-    <p>Need an account? <a href="/signup">Signup</a></p>
+    <p>Need an account? <a href="#/signup">Signup</a></p>
     <!-- <p>Or go <a href="/home">home</a>.</p> -->
 
 </div>
