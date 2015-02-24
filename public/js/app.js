@@ -1,12 +1,12 @@
 var app = angular.module('trailApp', ['ngRoute']);
 
-app.config(function($routeProvider,){
+app.config(function($routeProvider, $locationProvider){
 	
 	$routeProvider
 
 	.when('/', {
-		templateUrl: '/templates/home.html',
-		controller: 'homeCtrl'
+		templateUrl: '/templates/auth.html',
+		controller: 'authCtrl'
 	})
 	
 	.when('/auth', {
@@ -30,11 +30,11 @@ app.config(function($routeProvider,){
 	})
 	.when('/signup', {
 	   	templateUrl: '/templates/signup.html',
-	   	conntroller: 'authCtrl'
+	   	controller: 'authCtrl'
 	})
 	.otherwise({
 		redirectTo: '/'
 	});
 
-	// $locationProvider.html5Mode(true);
+	$locationProvider.html5Mode(true);
 });

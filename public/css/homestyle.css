@@ -2,11 +2,13 @@ html, body {
 	height: 100%;
 	width: 100%;
 	margin: 0px;
-	padding: 0px;
+	padding-top: 0px;
 
 }
 
-/**{border: 1px solid red}*/
+*{
+	border: 1px solid red;
+}
 
 .container {
 	display: flex;
@@ -22,41 +24,42 @@ html, body {
 	height: 100%;
 }
 
-.left {
 
+/*.tree {
+	width: 100%;
+	height: 50%;
+	margin-top: 100px;
+}*/
+/*
+.logo_left {
+	margin-left: 385px;
+	height: 90%;
+	width: 30%;
+}
+
+.logo_right {
+	margin-left: 55px;
+	height: 90%;
+	width: 30%;
+}
+*/
+/*.text {
+	width: 50%;
+	height: 20%;
+}
+
+.left {
+	margin-right: 0px;
 }
 
 .right {
 
 }
 
-.tree_one {
-	width: 100%;
-	height: 50%;
-	margin-top: 100px;
-}
-
-.left_tree {
-	margin-left: 218px;
-	height: 90%;
-	width: 30%;
-}
-
-.tree_two {
-	width: 100%;
-	height: 50%;
-	margin-top: 100px;
-}
-
-.right_tree {
-	margin-left: 218px;
-	height: 90%;
-	width: 30%;
-}
-
 h3 {
 	font-family: 'cabin';
+	margin-right: 10px;
 }
-
+*/
 
 

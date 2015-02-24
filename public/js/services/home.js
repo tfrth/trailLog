@@ -1,6 +1,12 @@
 var app = angular.module('trailApp');
 
-app.service('homeService', function($q, $http){
-
+app.service('homeService', function($http){
+	this.logout = function() {
+		$http({
+			method: 'GET',
+			url: '/api/logout'
+		
+		});
+	};
 });
 

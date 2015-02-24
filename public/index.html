@@ -1,20 +1,26 @@
 <!DOCTYPE>
 <html>
-<head>
+	<head>
 		
 		<link rel="stylesheet" type="text/css" href="/css/style.css">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap-theme.css">
-		<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css"></link>
-		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"></link>
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css"></link>
-		<!-- <base href="/"> -->
-
-		
-</head>
+		<link href="http://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">  
+    	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">  -->
+    	<base href="/">
+	</head>
 <body>
-<div class="navbar">
+<div class="main">
 <div class="trail-logo">Happy Trails...<h3>Outdoor Endeavor Log</h3>
 <!-- <div class="tree-box"></div> -->
+</div>
+</div>
+<div class="navbar" ng-controller="homeCtrl">
+<div class="logout">
+	<div class="button">
+		<button type="submit" class="main_button" ng-click="clickLogout()">Logout</button>
+	<!-- <button type="submit" class="logout" ng-click="clickLogout()">Logout</button> -->
+	</div>
 </div>
 </div>
 

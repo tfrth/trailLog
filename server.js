@@ -5,6 +5,7 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 var session = require('express-session');
+// var logout = require('express-passport-logout');
 
 
 var User = require('./api/models/userModel');
@@ -44,7 +45,9 @@ passport.deserializeUser(function(obj, done) {
 });
 
 
+
 var app = express();
+// app.use(logout);
 app.use(express.static(__dirname+'/public'));
 app.use(bodyParser.json());
 app.use(session({
@@ -69,6 +72,21 @@ app.post('/api/register', function(req, res) {
 	});
 });
 
+// app.get('/api/logout', logout(req.body));
+
+app.get('/api/logout', function(req, res) {
+        req.logout();
+        // res.status(200).end();
+        // res.redirect('/');
+    });
+
+
+// app.get('/api/logout', function (req, res){
+//   req.session.destroy(function (err) {
+//     res.redirect('/'); //Inside a callback… bulletproof!
+//   });
+// });
+
 var isAuthed = function(req, res, next) {
 	if (!req.isAuthenticated()) {
 		return res.status(400).end();
@@ -77,8 +95,6 @@ var isAuthed = function(req, res, next) {
 };
 
 app.get('/api/profile', isAuthed, userController.profile);
-
-
 
 var port = 8888;
 
