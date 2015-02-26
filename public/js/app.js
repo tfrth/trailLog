@@ -16,21 +16,21 @@ app.config(function($routeProvider){
 	.when('/profile', {
 		templateUrl: '/templates/profile.html',
 		controller: 'profileCtrl',
-		resolve: {
-			profile: function(profileService) {
-				return profileService.getProfile();
-			}
-		}
+		// resolve: {
+		// 	profile: function(profileService) {
+		// 		return profileService.getProfile();
+		// 	}
+		// }
 	})
 	.when('/log', {
 		templateUrl: '/templates/log.html',
-		controller: 'logCtrl'
-		// resolve: { function(logService) {
+		controller: 'logCtrl',
+		resolve: { 
+				logs: function(logService) {
+					return logService.getLog();
+			}
 
-
-		// 	}
-
-		// }
+		}
 	})
 	.when('/signup', {
 	   	templateUrl: '/templates/signup.html',

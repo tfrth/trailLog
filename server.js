@@ -5,12 +5,12 @@ var passport = require('passport');
 var localStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 var session = require('express-session');
-// var logout = require('express-passport-logout');
+
 
 
 var User = require('./api/models/userModel');
 var userController = require('./api/controllers/userController');
-//require other api controllers here
+var logController = require('./api/controllers/logController');
 
 var mongoUri = "mongodb://localhost:27017/TrailLog";
 mongoose.connect(mongoUri);
@@ -71,23 +71,10 @@ app.post('/api/register', function(req, res) {
 	});
 });
 
-// app.get('/api/profile', isAuthed, userController.profile);
-
-// app.get('/api/')
-
-// app.get('/api/logout', logout(req.body));
-
 app.get('/api/logout', function (req, res) {
         req.logout();
       	res.redirect('/#/');
     });
-
-
-// app.get('/api/logout', function (req, res){
-//   req.session.destroy(function (err) {
-//     res.redirect('/'); //Inside a callback… bulletproof!
-//   });
-// });
 
 var isAuthed = function(req, res, next) {
 	if (!req.isAuthenticated()) {
@@ -95,6 +82,11 @@ var isAuthed = function(req, res, next) {
 	}
 	return next();
 };
+
+app.get('/api/log', isAuthed, logController.list);
+app.post('/api/log', isAuthed, logController.create);     //log endpoints
+app.put('/api/log/:id', isAuthed, logController.update);
+
 
 app.get('/api/profile', isAuthed, userController.profile);
 

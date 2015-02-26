@@ -1,5 +1,5 @@
 module.exports = {
 	profile: function(req, res) {
-		return res.json(req.user);
+		return res.json(req.username);
 	}
 };

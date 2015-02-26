@@ -45,6 +45,7 @@ html, body {
  	height: 60px;
  	background: #303030;
  	margin-bottom: 0px;
+ 	padding: 0px;
  }
 
 .logout {
@@ -81,6 +82,11 @@ html, body {
 .errorMessage {
 	color: red;
 }
+
+.submit {
+
+}
+
 
 
 
