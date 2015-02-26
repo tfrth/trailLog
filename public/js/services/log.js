@@ -11,17 +11,17 @@ app.service('logService', function($q, $http){
 		})
 		return deferred.promise;
 	};
-	this.save = function(log) {
-		var deferred = $q.defer();
-		$http ({
-			method: 'PUT',
-			url: '/api/log/'+log._id,
-			data: log
-		}).then(function(response) {
-			deferred.resolve(response.data);
-		})
-		return deferred.promise;
-	};
+	// this.save = function(log) {
+	// 	var deferred = $q.defer();
+	// 	$http ({
+	// 		method: 'PUT',
+	// 		url: '/api/log/'+log._id,
+	// 		data: log
+	// 	}).then(function(response) {
+	// 		deferred.resolve(response.data);
+	// 	})
+	// 	return deferred.promise;
+	// };
 	this.add = function(log) {
 		var deferred = $q.defer();
 		$http({

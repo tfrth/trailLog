@@ -8,12 +8,17 @@
 <input ng-model="area" placeholder="Area"></input>
 <input ng-model="activity_type" placeholder="Activity Type"></input>
 <input ng-model="notes" placeholder="notes"></input>
-<button class="btn btn-xs" ng-click="saveLog(log)">Save</button>
+<button class="btn btn-xs" ng-click="createLog(log)">Save</button>
 </div>
 
 <div class="display_logged">
 	<li class="log" ng-repeat="log in logs">
-		<li>{{log.title}}</li>
+		<ul>{{log.title}}</ul>
+		<ul>{{log.state}}</ul>
+		<ul>{{log.area}}</ul>
+		<ul>{{log.activity_type}}</ul>
+		<ul>{{log.notes}}</ul>
+
 </div>
 
 </div>
