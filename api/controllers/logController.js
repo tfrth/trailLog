@@ -16,17 +16,27 @@ module.exports = {
 			return res.json(log);
 		});
 	},
-	update: function(req, res) {
-		Log.update({ _id: req.params.id }, req.body).exec(function(err) {
-			return res.status(200).end();
-		});
+	// update: function(req, res) {
+	// 	Log.update({ _id: req.params.id }, req.body).exec(function(err) {
+	// 		return res.status(200).end();
+	// 	});
 
-		// Todo.findOne({ _id: req.params.id }).exec().then(function(todo) {
-		// 	todo.completed = req.body.completed;
-		// 	//...
-		// 	todo.save(function(err) {
-		// 		return res.json(todo);
-		// 	});
-		// });
+	// 	// Todo.findOne({ _id: req.params.id }).exec().then(function(todo) {
+	// 	// 	todo.completed = req.body.completed;
+	// 	// 	//...
+	// 	// 	todo.save(function(err) {
+	// 	// 		return res.json(todo);
+	// 	// 	});
+	// 	// });
+	// },
+	delete: function(req, res) {
+		Log.delete({_id: req.params.id }, req.body).exec(function(err, Log) {
+			if (err) {
+				return res.status(500).end();
+			}
+			return res.status(200);
+			console.log("delete successful");
+		});
 	}
+
 };

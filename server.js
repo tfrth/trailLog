@@ -85,7 +85,8 @@ var isAuthed = function(req, res, next) {
 
 app.get('/api/log', isAuthed, logController.list);
 app.post('/api/log', isAuthed, logController.create);     //log endpoints
-app.put('/api/log/:id', isAuthed, logController.update);
+// app.put('/api/log/:id', isAuthed, logController.update);
+// app.delete('/api/log/:id', isAuthed, logController.delete);
 
 
 app.get('/api/profile', isAuthed, userController.profile);

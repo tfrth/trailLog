@@ -27,7 +27,7 @@ app.config(function($routeProvider){
 		controller: 'logCtrl',
 		resolve: { 
 				logs: function(logService) {
-					return logService.getLog();
+					return logService.getLog(); 
 			}
 
 		}
