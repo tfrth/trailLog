@@ -10,12 +10,12 @@ app.controller('authCtrl', function($scope, $location, authService) {
 		})
 	};
 	$scope.clickRegister = function() {
-		// alert('soemthing');
 		authService.register($scope.username, $scope.password).then(function() {
-			$location.path('/log');
+			// $location.path('/log');
+			$scope.message = "Signup successful, please login"
 		}).catch(function(err) {
 			// alert('Error signing up');
-			$scope.message = "There was an error signing up, please try again!"
+			$scope.message = "error";
 		})
 	};
 	// $scope.clickLogout = function() {

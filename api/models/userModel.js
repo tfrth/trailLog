@@ -3,8 +3,8 @@ var bcrypt = require('bcrypt');
 var q = require('q');
  
 var schema = mongoose.Schema({					//establishes the schema with desired 
-	username: {type: String, unique: true},
-	password: String
+	username: {type: String, unique: true, required: true},
+	password: {type: String, required: true}
 	// email: String
 });
 

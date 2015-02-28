@@ -68,6 +68,7 @@ app.post('/api/register', function(req, res) {
 			return res.status(500).end();
 		}
 		return res.json(user);
+		// res.redirect('/log');
 	});
 });
 

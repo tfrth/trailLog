@@ -15,7 +15,7 @@ app.config(function($routeProvider){
 	})
 	.when('/profile', {
 		templateUrl: '/templates/profile.html',
-		controller: 'profileCtrl',
+		controller: 'profileCtrl'
 		// resolve: {
 		// 	profile: function(profileService) {
 		// 		return profileService.getProfile();
@@ -24,13 +24,13 @@ app.config(function($routeProvider){
 	})
 	.when('/log', {
 		templateUrl: '/templates/log.html',
-		controller: 'logCtrl',
-		resolve: { 
-				logs: function(logService) {
-					return logService.getLog(); 
-			}
+		controller: 'logCtrl'
+		// resolve: { 
+		// 		logs: function(logService) {
+		// 			return logService.getLog(); 
+		// 	}
 
-		}
+		// }
 	})
 	.when('/signup', {
 	   	templateUrl: '/templates/signup.html',
