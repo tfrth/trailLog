@@ -16,7 +16,7 @@ app.controller('logCtrl', function($scope, logService, logs) {
 		$scope.area = '';
 		$scope.activity_type = '';
 		$scope.notes = '';
-		// window.location.reload();
+		window.location.reload();
 
 	}
 

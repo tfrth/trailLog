@@ -12,7 +12,7 @@ app.controller('authCtrl', function($scope, $location, authService) {
 	$scope.clickRegister = function() {
 		authService.register($scope.username, $scope.password).then(function() {
 			// $location.path('/log');
-			$scope.message = "Signup successful, please login"
+			$scope.message = "Signup successful, please login!";
 		}).catch(function(err) {
 			// alert('Error signing up');
 			$scope.message = "error";

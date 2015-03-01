@@ -1,4 +1,4 @@
-var app = angular.module('trailApp', ['ngRoute']);
+var app = angular.module('trailApp', ['ngRoute', 'ui.bootstrap']);
 
 app.config(function($routeProvider){
 	$routeProvider
@@ -24,17 +24,21 @@ app.config(function($routeProvider){
 	})
 	.when('/log', {
 		templateUrl: '/templates/log.html',
-		controller: 'logCtrl'
-		// resolve: { 
-		// 		logs: function(logService) {
-		// 			return logService.getLog(); 
-		// 	}
+		controller: 'logCtrl',
+		resolve: { 
+				logs: function(logService) {
+					return logService.getLog();
+			}
 
-		// }
+		}
 	})
 	.when('/signup', {
 	   	templateUrl: '/templates/signup.html',
 	   	controller: 'authCtrl'
+	})
+	.when('/map', {
+		templateUrl: '/templates/map.html',
+		controller: 'mapCtrl'
 	})
 	.otherwise({
 		redirectTo: '/'

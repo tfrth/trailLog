@@ -48,7 +48,7 @@ html, body {
  	height: 60px;
  	background: #303030;
  	margin-bottom: 0px;
- 	padding: 0px;
+ 	padding-left: 20px;
  }
 
 .logout {
@@ -63,9 +63,8 @@ html, body {
 	background: #303030;
 	width: 50%;
 	height: 60px;
-
-
 }
+
 
 .main_button {
 	height: 40px;
@@ -81,6 +80,13 @@ html, body {
 	line-height: 1.33;
 
 }
+
+.btn-primary {
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+
 
 .container {
 	background-color: #EDEFED;

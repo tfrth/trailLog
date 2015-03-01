@@ -6,6 +6,7 @@ var schema = mongoose.Schema({
 	area: String,
 	activity_type: String,
 	notes: String,
+	$currentDate: { type: "date"},
 	user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', index: true }
 
 });

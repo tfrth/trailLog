@@ -1,17 +1,15 @@
 var app = angular.module('trailApp');
 
-app.controller('homeCtrl', function($scope, $log, homeService){
-	
-	$scope.clickLogout = function() {
-		homeService.logout();
-	};
-	// $scope.items = [
- //    'The first choice!',
- //    'And another choice for you.',
- //    'but wait! A third!'
- //  ];
 
-$scope.status = {
+app.controller('dropdownCtrl', function($scope, $log) {
+  $scope.yo = "yo";
+  $scope.items = [
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!'
+  ];
+
+  $scope.status = {
     isopen: false
   };
 
@@ -25,4 +23,3 @@ $scope.status = {
     $scope.status.isopen = !$scope.status.isopen;
   };
 });
-

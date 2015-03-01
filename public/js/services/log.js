@@ -23,6 +23,7 @@ app.service('logService', function($q, $http){
 	// 	return deferred.promise;
 	// };
 	this.add = function(log) {
+		// getLog();
 		var deferred = $q.defer();
 		$http({
 			method: 'POST',
@@ -37,8 +38,8 @@ app.service('logService', function($q, $http){
 		var deferred = $q.defer();
 		$http({
 			method: 'DELETE',
-			url: 'api/delete/:id',
-			data: log
+			url: 'api/delete',
+			// data: log
 		}).then(function(response) {
 			deferred.resolve(response.data);
 		});
