@@ -103,6 +103,23 @@ html, body {
 
 }
 
+.map_container {
+	display: flex;
+	padding: 0px;
+}
+
+.pin_bar {
+	width: 20%;
+	height:100%;
+	border: 2px solid black;
+}
+
+#map {
+	border: 2px solid black;
+	width: 80%;
+	height: 100%;
+}
+
 
 
 
